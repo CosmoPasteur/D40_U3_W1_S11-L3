@@ -79,3 +79,12 @@ console.log("quellaTupla");
 console.log(
   "Entrambi usati per definire una tipologia. TYPE solitamente è usato per Union e Tuple (definendo tipi Primitivi), mentre le Interface possono essere ridefinite, sono molto simili al “type”, ma a differenza di quest’ultimo, ci permette di definire la forma di un oggetto, pittosto che un tipo di oggetto. "
 );
+
+//13) Definisci un'interfaccia in TypeScript per un oggetto dotato di proprietà "firstname", "lastname", e "age".
+interface person {
+  firstname: string;
+  lastname: string;
+  age: number;
+}
+
+//14) Crea un'interfaccia per un utente con email obbligatoria e telefono opzionale.
