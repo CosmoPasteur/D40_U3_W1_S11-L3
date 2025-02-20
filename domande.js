@@ -59,4 +59,22 @@ var studenti = [
 ];
 console.log(studenti);
 console.log(studenti[0].voto); //Voto 8.5
-//16) Crea un'interfaccia base "Veicolo" e estendila per creare "Auto".
+var MiaAuto = /** @class */ (function () {
+    function MiaAuto(marca, modello, colore, numeroPorte, tipoCambio) {
+        this.marca = marca;
+        this.modello = modello;
+        this.colore = colore;
+        this.numeroPorte = numeroPorte;
+        this.tipoCambio = tipoCambio;
+    }
+    MiaAuto.prototype.avvia = function () {
+        console.log("L'auto sta partendo");
+    };
+    MiaAuto.prototype.ferma = function () {
+        console.log("L'auto si sta fermando");
+    };
+    return MiaAuto;
+}());
+var miaAuto = new MiaAuto("Toyota", "Corolla", "Rosso", 4, "Manuale");
+miaAuto.avvia(); // Stampa "L'auto sta partendo"
+miaAuto.ferma(); // Stampa "L'auto si sta fermando"

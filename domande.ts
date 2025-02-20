@@ -109,3 +109,43 @@ console.log(studenti);
 console.log(studenti[0].voto); //Voto 8.5
 
 //16) Crea un'interfaccia base "Veicolo" e estendila per creare "Auto".
+interface Veicolo {
+  marca: string;
+  modello: string;
+  colore: string;
+  avvia(): void;
+  ferma(): void;
+}
+
+interface Auto extends Veicolo {
+  numeroPorte: number;
+  tipoCambio: string;
+}
+
+class MiaAuto implements Auto {
+  marca: string;
+  modello: string;
+  colore: string;
+  numeroPorte: number;
+  tipoCambio: string;
+
+  constructor(marca: string, modello: string, colore: string, numeroPorte: number, tipoCambio: string) {
+    this.marca = marca;
+    this.modello = modello;
+    this.colore = colore;
+    this.numeroPorte = numeroPorte;
+    this.tipoCambio = tipoCambio;
+  }
+
+  avvia(): void {
+    console.log("L'auto sta partendo");
+  }
+
+  ferma(): void {
+    console.log("L'auto si sta fermando");
+  }
+}
+
+const miaAuto = new MiaAuto("Toyota", "Corolla", "Rosso", 4, "Manuale");
+miaAuto.avvia(); // Stampa "L'auto sta partendo"
+miaAuto.ferma(); // Stampa "L'auto si sta fermando"
