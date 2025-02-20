@@ -88,3 +88,9 @@ interface person {
 }
 
 //14) Crea un'interfaccia per un utente con email obbligatoria e telefono opzionale.
+interface User {
+  email: string;
+  telefono?: string;
+}
+
+//15) Crea un array tipizzato di oggetti "Studente" con nome e voto.
