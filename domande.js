@@ -52,4 +52,11 @@ var quellaTupla = ["string", "string", "string", "number", "number"];
 console.log("quellaTupla");
 //12) Qual è la differenza tra type e interface?
 console.log("Entrambi usati per definire una tipologia. TYPE solitamente è usato per Union e Tuple (definendo tipi Primitivi), mentre le Interface possono essere ridefinite, sono molto simili al “type”, ma a differenza di quest’ultimo, ci permette di definire la forma di un oggetto, pittosto che un tipo di oggetto. ");
-//15) Crea un array tipizzato di oggetti "Studente" con nome e voto.
+var studenti = [
+    { nome: "Alice", voto: 8.5 },
+    { nome: "Bob", voto: 7.0 },
+    { nome: "Charlie", voto: 9.2 },
+];
+console.log(studenti);
+console.log(studenti[0].voto); //Voto 8.5
+//16) Crea un'interfaccia base "Veicolo" e estendila per creare "Auto".

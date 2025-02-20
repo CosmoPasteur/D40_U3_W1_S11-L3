@@ -94,3 +94,18 @@ interface User {
 }
 
 //15) Crea un array tipizzato di oggetti "Studente" con nome e voto.
+interface Studente {
+  nome: string;
+  voto: number;
+}
+
+var studenti: Studente[] = [
+  { nome: "Alice", voto: 8.5 },
+  { nome: "Bob", voto: 7.0 },
+  { nome: "Charlie", voto: 9.2 },
+];
+
+console.log(studenti);
+console.log(studenti[0].voto); //Voto 8.5
+
+//16) Crea un'interfaccia base "Veicolo" e estendila per creare "Auto".
